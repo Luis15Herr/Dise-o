@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Commissioner", sans-serif;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: hsl(235, 18%, 26%);
+  font-size: 18px;
+  position: relative;
+}
+
+body::after {
+  position: absolute;
+  top: 0;
+  background-image: url(./design/desktop-design.jpg);
+  content: "";
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  height: 100%;
+  pointer-events: none;
+}
+
+.displayn {
+  display: none;
+}
+
+.container {
+  width: 1440px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+.newsletter__form {
+  width: 820px;
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  padding: 22px;
+  height: 565px;
+  border-radius: 35px;
+}
+
+.form__left {
+  padding-top: 60px;
+  padding-left: 35px;
+  text-align: center;
+  padding-right: 58px;
+}
+
+.form__left-title {
+  position: relative;
+  left: -14px;
+  top: -3px;
+  letter-spacing: -0.5px;
+  color: hsl(234, 29%, 20%);
+  font-size: 2.8em;
+  font-weight: 700;
+}
+
+.form__left-subtitle {
+  color: hsl(235, 18%, 26%);
+  font-size: 0.77em;
+  line-height: 21px;
+  text-align: left;
+  font-weight: 700;
+  margin-top: 13px;
+}
+
+.form__left-features {
+  padding-top: 22px;
+}
+
+.features__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 11px;
+}
+
+.features__item-icon {
+  height: 19px;
+  width: 19px;
+}
+
+.features__item-text {
+  text-align: left;
+  font-size: 0.78em;
+  padding-left: 13px;
+}
+
+.form {
+  margin-top: 37px;
+}
+
+.form__label {
+  display: block;
+  text-align: left;
+  font-size: 0.6em;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.form__email {
+  display: block;
+  width: 100%;
+  border: 1px solid hsl(231, 7%, 60%);
+  border-radius: 5px;
+  outline: none;
+  height: 50px;
+}
+
+.form__btn {
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: hsl(234, 29%, 20%);
+  height: 50px;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: hsl(0, 0%, 100%);
+  font-size: 0.78em;
+  font-weight: 700;
+}
+
+.form__right {
+  height: 100%;
+  margin-left: auto;
+}
+
+.form__right-ilustration {
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */
