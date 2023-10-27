@@ -28,12 +28,12 @@
   <body>
     <div class="container">
       <div class="newsletter__form">
-        <div class="form__left">
-          <span class="form__left-title"> Stay updated! </span>
-          <p class="form__left-subtitle">
+        <div class="form">
+          <span class="form__title"> Stay updated! </span>
+          <p class="form__subtitle">
             Join 60,000+ product managers receiving monthly updates on:
           </p>
-          <div class="form__left-features">
+          <div class="form__features">
             <span class="features__item">
               <img
                 src="./assets/images/icon-list.svg"
@@ -64,10 +64,12 @@
               <p class="features__item-text">And much more!!</p>
             </span>
           </div>
-          <form action="" class="form">
+          <form action="">
             <span class="form__label">Email address</span>
             <input class="form__email" type="email" />
-            <button class="form__btn">Subscribe to monthly newsletter</button>
+            <button class="form__btn hide-form-button">
+              Subscribe to monthly newsletter
+            </button>
           </form>
         </div>
         <div class="form__right">
@@ -77,26 +79,27 @@
             class="form__right-ilustration"
           />
         </div>
+        <div class="form__success displayn">
+          <img
+            src="./assets/images/icon-success.svg"
+            alt=""
+            class="success-icon"
+          />
+          <span class="form__title form-title--success hide-form-button"
+            >Thanks for subscribing!</span
+          >
+          <p class="form__subtitle form-subtitle--success">
+            A confirmation email has been sent to
+            <span class="fw8">ash@loremcompany.com</span>. Please open it and
+            click the button inside to confirm your subscription.
+          </p>
+          <button class="form__btn form__btn--success">Dismiss message</button>
+        </div>
       </div>
     </div>
 
     <!-- Sign-up form start -->
     <div class="displayn">
-      Stay updated! Join 60,000+ product managers receiving monthly updates on:
-      Product discovery and building what matters Measuring to ensure updates
-      are a success And much more! Email address email@company.com Subscribe to
-      monthly newsletter
-
-      <!-- Sign-up form end -->
-
-      <!-- Success message start -->
-
-      Thanks for subscribing! A confirmation email has been sent to
-      ash@loremcompany.com. Please open it and click the button inside to
-      confirm your subscription. Dismiss message
-
-      <!-- Success message end -->
-
       <div class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
@@ -104,5 +107,6 @@
         >. Coded by <a href="#">Your Name Here</a>.
       </div>
     </div>
+    <script src="./js.js"></script>
   </body>
 </html>

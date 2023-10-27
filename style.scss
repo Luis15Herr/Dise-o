@@ -22,9 +22,9 @@ body {
   position: relative;
 }
 body::after {
-  position: absolute;
+  /*   position: absolute;
   top: 0;
-  background-image: url(./design/desktop-design.jpg);
+  background-image: url(./design/desktop-success.jpg);
   content: "";
   width: 100%;
   background-position: center;
@@ -32,7 +32,7 @@ body::after {
   background-repeat: no-repeat;
   opacity: 0.3;
   height: 100%;
-  pointer-events: none;
+  pointer-events: none; */
 }
 .displayn {
   display: none;
@@ -51,15 +51,21 @@ body::after {
   display: flex;
   padding: 22px;
   height: 565px;
-  border-radius: 35px;
+  border-radius: 30px;
 }
-.form__left {
+
+.newsletter__form--success {
+  width: 445px;
+  height: 457px;
+  padding: 42px 57px;
+}
+.form {
   padding-top: 60px;
   padding-left: 35px;
   text-align: center;
   padding-right: 58px;
 }
-.form__left-title {
+.form__title {
   position: relative;
   left: -14px;
   top: -3px;
@@ -68,7 +74,7 @@ body::after {
   font-size: 2.8em;
   font-weight: 700;
 }
-.form__left-subtitle {
+.form__subtitle {
   color: $CharcoalGrey;
   font-size: 0.77em;
   line-height: 21px;
@@ -76,7 +82,7 @@ body::after {
   font-weight: 700;
   margin-top: 13px;
 }
-.form__left-features {
+.form__features {
   padding-top: 22px;
 }
 .features__item {
@@ -94,7 +100,7 @@ body::after {
   font-size: 0.78em;
   padding-left: 13px;
 }
-.form {
+form {
   margin-top: 37px;
 }
 .form__label {
@@ -130,4 +136,52 @@ body::after {
 }
 .form__right-ilustration {
   height: 100%;
+}
+
+.form__success {
+  width: 331px;
+}
+
+.success-icon {
+  width: 55px;
+  display: block;
+  margin-bottom: 36px;
+}
+
+.form-title--success {
+  line-height: 49px;
+  position: initial;
+}
+
+.form-subtitle--success {
+  margin-top: 23px;
+  font-size: 0.78em;
+  font-weight: normal;
+}
+.form__btn--success {
+  margin-top: 35px;
+}
+
+.fw8 {
+  font-weight: 800;
+}
+
+/* Agrega estas reglas CSS a tu archivo de estilos */
+
+/* Inicialmente, oculta el formulario y el lado derecho */
+
+/* Aplica una transición suave para una animación agradable */
+.newsletter__form {
+  transition: all 0.5s ease-in-out;
+}
+
+/* Cuando se hace clic en el botón, muestra solo el bloque "success" y oculta el resto */
+.newsletter__form.hide {
+  .form,
+  .form__right {
+    display: none;
+  }
+  .success {
+    display: block;
+  }
 }
