@@ -66,6 +66,10 @@
           </div>
           <form action="">
             <span class="form__label">Email address</span>
+            <span class="form__label form__label--error"
+              >Valid email required</span
+            >
+
             <input class="form__email" type="email" />
             <button class="form__btn hide-form-button">
               Subscribe to monthly newsletter
@@ -79,22 +83,22 @@
             class="form__right-ilustration"
           />
         </div>
-        <div class="form__success displayn">
-          <img
-            src="./assets/images/icon-success.svg"
-            alt=""
-            class="success-icon"
-          />
-          <span class="form__title form-title--success hide-form-button"
-            >Thanks for subscribing!</span
-          >
-          <p class="form__subtitle form-subtitle--success">
-            A confirmation email has been sent to
-            <span class="fw8">ash@loremcompany.com</span>. Please open it and
-            click the button inside to confirm your subscription.
-          </p>
-          <button class="form__btn form__btn--success">Dismiss message</button>
-        </div>
+      </div>
+      <div class="form__success">
+        <img
+          src="./assets/images/icon-success.svg"
+          alt=""
+          class="success-icon"
+        />
+        <span class="form__title form-title--success hide-form-button"
+          >Thanks for subscribing!</span
+        >
+        <p class="form__subtitle form-subtitle--success">
+          A confirmation email has been sent to
+          <span class="fw8">ash@loremcompany.com</span>. Please open it and
+          click the button inside to confirm your subscription.
+        </p>
+        <button class="form__btn form__btn--success">Dismiss message</button>
       </div>
     </div>
 

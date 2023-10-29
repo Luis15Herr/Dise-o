@@ -14,12 +14,13 @@ body {
   background-color: hsl(235, 18%, 26%);
   font-size: 18px;
   position: relative;
+  overflow: hidden;
 }
 
 body::after {
   /*   position: absolute;
   top: 0;
-  background-image: url(./design/desktop-success.jpg);
+  background-image: url(./design/error-states.jpg);
   content: "";
   width: 100%;
   background-position: center;
@@ -44,18 +45,19 @@ body::after {
 }
 
 .newsletter__form {
+  transition: ease 0.5s;
   width: 820px;
   background: hsl(0, 0%, 100%);
   display: flex;
   padding: 22px;
   height: 565px;
   border-radius: 30px;
+  overflow: hidden;
 }
 
 .newsletter__form--success {
-  width: 445px;
-  height: 457px;
-  padding: 42px 57px;
+  transform: translateY(1000px);
+  position: absolute;
 }
 
 .form {
@@ -125,6 +127,7 @@ form {
   border-radius: 5px;
   outline: none;
   height: 50px;
+  padding: 0 22px;
 }
 
 .form__btn {
@@ -150,7 +153,20 @@ form {
 }
 
 .form__success {
-  width: 331px;
+  background: hsl(0, 0%, 100%);
+  border-radius: 30px;
+  position: absolute;
+  transition: ease 0.5s;
+  /* width: 331px; */
+  width: 445px;
+  height: 457px;
+  padding: 42px 57px;
+  transform: translateY(-1000px);
+}
+
+.form__success--shown {
+  transform: translateY(0);
+  position: relative;
 }
 
 .success-icon {
@@ -192,4 +208,47 @@ form {
 }
 .newsletter__form.hide .success {
   display: block;
+}
+
+form {
+  position: relative;
+}
+
+.form__label--error {
+  color: hsl(4, 100%, 67%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: ease 0.3s;
+}
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.form__email--shaking {
+  animation: horizontal-shaking 0.5s;
+}
+
+form.error .form__email {
+  border: 1px solid hsl(4, 100%, 67%);
+  background-color: #ffe8e6;
+  color: hsl(4, 100%, 67%);
+}
+form.error .form__label--error {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */
