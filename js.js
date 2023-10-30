@@ -7,6 +7,7 @@ const successBtn = document.querySelector(".form__btn--success");
 const formPosition = newsletterForm.getBoundingClientRect().top;
 const emailInput = document.querySelector(".form__email");
 const form = document.querySelector("form");
+const body = document.querySelector("body");
 
 hideFormButton.addEventListener("click", () => {
   event.preventDefault();
@@ -15,6 +16,9 @@ hideFormButton.addEventListener("click", () => {
     form.classList.remove("error");
     newsletterForm.classList.add("newsletter__form--success");
     successForm.classList.add("form__success--shown");
+    if (innerWidth < 800) {
+      body.classList.add("overf");
+    }
     return true;
   }
   emailInput.classList.add("form__email--shaking");
@@ -34,4 +38,7 @@ successBtn.addEventListener("click", () => {
   successForm.classList.remove("form__success--shown");
   newsletterForm.classList.remove("newsletter__form--success");
   emailInput.value = "";
+  if (innerWidth < 800) {
+    body.classList.remove("overf");
+  }
 });
