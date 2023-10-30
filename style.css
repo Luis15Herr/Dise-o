@@ -18,9 +18,9 @@ body {
 }
 
 body::after {
-  /*   position: absolute;
+  position: absolute;
   top: 0;
-  background-image: url(./design/error-states.jpg);
+  background-image: url(./design/mobile-success.jpg);
   content: "";
   width: 100%;
   background-position: center;
@@ -28,7 +28,7 @@ body::after {
   background-repeat: no-repeat;
   opacity: 0.3;
   height: 100%;
-  pointer-events: none; */
+  pointer-events: none;
 }
 
 .displayn {
@@ -129,6 +129,9 @@ form {
   height: 50px;
   padding: 0 22px;
 }
+.form__email:focus {
+  border: 1px solid hsl(234, 29%, 20%);
+}
 
 .form__btn {
   border-radius: 5px;
@@ -141,6 +144,32 @@ form {
   color: hsl(0, 0%, 100%);
   font-size: 0.78em;
   font-weight: 700;
+  transition: ease-in-out 1s;
+  position: relative;
+  overflow: hidden;
+}
+.form__btn::before {
+  content: "";
+  background: rgb(245, 85, 124);
+  background: linear-gradient(90deg, rgb(245, 85, 124) 0%, rgb(249, 107, 67) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.form__btn:hover {
+  cursor: pointer;
+}
+.form__btn:hover::before {
+  opacity: 1;
+}
+
+.form__btn-text {
+  z-index: 1000;
+  position: relative;
 }
 
 .form__right {
@@ -148,8 +177,12 @@ form {
   margin-left: auto;
 }
 
-.form__right-ilustration {
+.form__right-ilustration-desktop {
   height: 100%;
+}
+
+.form__right-ilustration-mobile {
+  display: none;
 }
 
 .form__success {
@@ -251,4 +284,96 @@ form.error .form__email {
 }
 form.error .form__label--error {
   opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .newsletter__form {
+    padding: 0;
+    flex-wrap: wrap;
+    height: 100%;
+    border-radius: 0;
+    align-items: flex-start;
+  }
+  .form__right-ilustration-desktop {
+    display: none;
+  }
+  .form__right-ilustration-mobile {
+    display: block;
+  }
+  .form {
+    order: 2;
+    padding: 0 23px;
+    height: 100%;
+    margin-top: 34px;
+    text-align: left;
+  }
+  .form__title {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    font-size: 2.28em;
+  }
+  .form__subtitle {
+    font-size: 0.88em;
+    line-height: 23px;
+    margin-top: 21px;
+  }
+  .form__features {
+    padding-top: 27px;
+    padding-left: 1px;
+  }
+  .features__item {
+    font-size: 1.15em;
+    line-height: 22px;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+  .features__item-icon {
+    width: 21px;
+    height: 21px;
+  }
+  .form__right {
+    order: 1;
+    height: 285px;
+  }
+  form {
+    margin-top: 41px;
+  }
+  .form__label {
+    font-size: 0.68em;
+  }
+  .form__btn {
+    margin-top: 30px;
+    height: 55px;
+    position: relative;
+    bottom: 41px;
+  }
+  .form__btn-text {
+    font-size: 1.15em;
+    display: block;
+    padding-top: 3px;
+  }
+  .form__success {
+    height: 100%;
+    border-radius: 0;
+    padding: 0 23px;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .success-icon {
+    width: 65px;
+  }
+  .form-title--success {
+    line-height: 42px;
+  }
+  .form-subtitle--success {
+    font-size: 0.89em;
+    line-height: 24px;
+  }
 }/*# sourceMappingURL=style.css.map */

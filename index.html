@@ -72,7 +72,9 @@
 
             <input class="form__email" type="email" />
             <button class="form__btn hide-form-button">
-              Subscribe to monthly newsletter
+              <span class="form__btn-text"
+                >Subscribe to monthly newsletter</span
+              >
             </button>
           </form>
         </div>
@@ -80,25 +82,34 @@
           <img
             src="./assets/images/illustration-sign-up-desktop.svg"
             alt=""
-            class="form__right-ilustration"
+            class="form__right-ilustration-desktop"
+          />
+          <img
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            alt=""
+            class="form__right-ilustration-mobile"
           />
         </div>
       </div>
       <div class="form__success">
-        <img
-          src="./assets/images/icon-success.svg"
-          alt=""
-          class="success-icon"
-        />
-        <span class="form__title form-title--success hide-form-button"
-          >Thanks for subscribing!</span
-        >
-        <p class="form__subtitle form-subtitle--success">
-          A confirmation email has been sent to
-          <span class="fw8">ash@loremcompany.com</span>. Please open it and
-          click the button inside to confirm your subscription.
-        </p>
-        <button class="form__btn form__btn--success">Dismiss message</button>
+        <div class="form__succes-wrapper">
+          <img
+            src="./assets/images/icon-success.svg"
+            alt=""
+            class="success-icon"
+          />
+          <span class="form__title form-title--success hide-form-button"
+            >Thanks for subscribing!</span
+          >
+          <p class="form__subtitle form-subtitle--success">
+            A confirmation email has been sent to
+            <span class="fw8">ash@loremcompany.com</span>. Please open it and
+            click the button inside to confirm your subscription.
+          </p>
+        </div>
+        <button class="form__btn form__btn--success">
+          <span class="form__btn-text">Dismiss message</span>
+        </button>
       </div>
     </div>
 
