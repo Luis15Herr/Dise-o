@@ -324,6 +324,7 @@ form.error .form__label--error {
     margin-top: 34px;
     text-align: left;
     padding-bottom: 30px;
+    margin: 0 auto;
   }
   .form__title {
     position: relative;
