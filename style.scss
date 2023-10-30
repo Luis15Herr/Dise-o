@@ -297,7 +297,8 @@ form.error {
     display: none;
   }
   .form__right-ilustration-mobile {
-    display: block;
+    display: none;
+    width: 100%;
   }
   .form {
     order: 2;
@@ -334,14 +335,17 @@ form.error {
   .form__right {
     order: 1;
     height: 285px;
+    width: 100%;
+    background-image: url(./assets/images/illustration-sign-up-mobile.svg);
   }
+
   form {
     margin-top: 41px;
   }
   .form__label {
     font-size: 0.68em;
   }
-  .form__btn {
+  .form__btn--success {
     margin-top: 30px;
     height: 55px;
     position: relative;
