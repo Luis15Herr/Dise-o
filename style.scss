@@ -282,6 +282,12 @@ form.error {
 }
 
 @media screen and (max-width: 800px) {
+  html,
+  body {
+    height: auto;
+    overflow: initial;
+    overflow-x: hidden;
+  }
   .container {
     width: 100%;
     align-items: flex-start;
@@ -292,12 +298,13 @@ form.error {
     height: 100%;
     border-radius: 0;
     align-items: flex-start;
+    overflow: initial;
   }
   .form__right-ilustration-desktop {
     display: none;
   }
   .form__right-ilustration-mobile {
-    display: none;
+    display: block;
     width: 100%;
   }
   .form {
@@ -306,6 +313,7 @@ form.error {
     height: 100%;
     margin-top: 34px;
     text-align: left;
+    padding-bottom: 30px;
   }
   .form__title {
     position: relative;
@@ -334,9 +342,7 @@ form.error {
   }
   .form__right {
     order: 1;
-    height: 285px;
     width: 100%;
-    background-image: url(./assets/images/illustration-sign-up-mobile.svg);
   }
 
   form {
