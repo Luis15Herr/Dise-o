@@ -296,6 +296,7 @@ form.error .form__label--error {
     height: auto;
     overflow: initial;
     overflow-x: hidden;
+    background-color: white;
   }
   .container {
     width: 100%;
@@ -378,6 +379,7 @@ form.error .form__label--error {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
   }
   .success-icon {
     width: 65px;
