@@ -8,6 +8,7 @@ const formPosition = newsletterForm.getBoundingClientRect().top;
 const emailInput = document.querySelector(".form__email");
 const form = document.querySelector("form");
 const body = document.querySelector("body");
+const main = document.querySelector("html");
 
 hideFormButton.addEventListener("click", () => {
   event.preventDefault();
@@ -16,8 +17,9 @@ hideFormButton.addEventListener("click", () => {
     form.classList.remove("error");
     newsletterForm.classList.add("newsletter__form--success");
     successForm.classList.add("form__success--shown");
-    if (innerWidth < 800) {
+    if (innerWidth < 900) {
       body.classList.add("overf");
+      main.classList.add("overf");
     }
     return true;
   }
@@ -38,7 +40,8 @@ successBtn.addEventListener("click", () => {
   successForm.classList.remove("form__success--shown");
   newsletterForm.classList.remove("newsletter__form--success");
   emailInput.value = "";
-  if (innerWidth < 800) {
+  if (innerWidth < 900) {
     body.classList.remove("overf");
+    main.classList.remove("overf");
   }
 });

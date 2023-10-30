@@ -37,6 +37,7 @@ body::after {
 }
 .overf {
   overflow: hidden;
+  height: 100%;
 }
 .displayn {
   display: none;
@@ -317,6 +318,7 @@ form.error {
     height: 100%;
     margin-top: 34px;
     text-align: left;
+    padding-top: 35px;
     padding-bottom: 30px;
     margin: 0 auto;
   }
@@ -368,7 +370,7 @@ form.error {
     padding-top: 3px;
   }
   .form__success {
-    height: 100vh;
+    height: 100%;
     border-radius: 0;
     padding: 0 23px;
     padding-top: 150px;
