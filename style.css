@@ -41,7 +41,7 @@ body::after {
 }
 
 .container {
-  width: 1440px;
+  width: 100%;
   margin: auto;
   justify-content: center;
   align-items: center;
