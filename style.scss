@@ -22,19 +22,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-body::after {
-  /*  position: absolute;
-  top: 0;
-  background-image: url(./design/mobile-success.jpg);
-  content: "";
-  width: 100%;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.3;
-  height: 100%;
-  pointer-events: none; */
-}
 .overf {
   overflow: hidden;
   height: 100%;
@@ -42,6 +29,11 @@ body::after {
 .displayn {
   display: none;
 }
+
+.fw8 {
+  font-weight: 800;
+}
+
 .container {
   width: 100%;
   margin: auto;
@@ -50,6 +42,7 @@ body::after {
   display: flex;
   height: 100%;
 }
+/*left section*/
 .newsletter__form {
   transition: ease 0.5s;
   width: 820px;
@@ -59,6 +52,20 @@ body::after {
   height: 565px;
   border-radius: 30px;
   overflow: hidden;
+}
+
+.newsletter__form {
+  transition: all 0.5s ease-in-out;
+}
+
+.newsletter__form.hide {
+  .form,
+  .form__right {
+    display: none;
+  }
+  .success {
+    display: block;
+  }
 }
 
 .newsletter__form--success {
@@ -106,8 +113,21 @@ body::after {
   font-size: 0.78em;
   padding-left: 13px;
 }
+
+/*Form*/
 form {
   margin-top: 37px;
+  position: relative;
+  &.error {
+    .form__email {
+      border: 1px solid $Tomato;
+      background-color: #ffe8e6;
+      color: $Tomato;
+    }
+    .form__label--error {
+      opacity: 1;
+    }
+  }
 }
 .form__label {
   display: block;
@@ -171,16 +191,21 @@ form {
   z-index: 1000;
   position: relative;
 }
-.form__right {
-  height: 100%;
-  margin-left: auto;
+
+.form__label--error {
+  color: $Tomato;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: ease 0.3s;
 }
-.form__right-ilustration-desktop {
-  height: 100%;
+
+.form__email--shaking {
+  animation: horizontal-shaking 0.5s;
 }
-.form__right-ilustration-mobile {
-  display: none;
-}
+
+/*Success*/
 .form__success {
   background: $White;
   border-radius: 30px;
@@ -217,41 +242,6 @@ form {
   margin-top: 35px;
 }
 
-.fw8 {
-  font-weight: 800;
-}
-
-/* Agrega estas reglas CSS a tu archivo de estilos */
-
-/* Inicialmente, oculta el formulario y el lado derecho */
-
-/* Aplica una transición suave para una animación agradable */
-.newsletter__form {
-  transition: all 0.5s ease-in-out;
-}
-
-/* Cuando se hace clic en el botón, muestra solo el bloque "success" y oculta el resto */
-.newsletter__form.hide {
-  .form,
-  .form__right {
-    display: none;
-  }
-  .success {
-    display: block;
-  }
-}
-form {
-  position: relative;
-}
-
-.form__label--error {
-  color: $Tomato;
-  position: absolute;
-  top: 0;
-  right: 0;
-  opacity: 0;
-  transition: ease 0.3s;
-}
 @keyframes horizontal-shaking {
   0% {
     transform: translateX(0);
@@ -270,19 +260,16 @@ form {
   }
 }
 
-.form__email--shaking {
-  animation: horizontal-shaking 0.5s;
+/*Right Sections */
+.form__right {
+  height: 100%;
+  margin-left: auto;
 }
-
-form.error {
-  .form__email {
-    border: 1px solid $Tomato;
-    background-color: #ffe8e6;
-    color: $Tomato;
-  }
-  .form__label--error {
-    opacity: 1;
-  }
+.form__right-ilustration-desktop {
+  height: 100%;
+}
+.form__right-ilustration-mobile {
+  display: none;
 }
 
 @media screen and (max-width: 800px) {

@@ -1,6 +1,6 @@
 // Agrega este script en tu archivo JavaScript
 
-const hideFormButton = document.querySelector(".hide-form-button");
+const hideFormButton = document.querySelector(".form__btn--hide");
 const newsletterForm = document.querySelector(".newsletter__form");
 const successForm = document.querySelector(".form__success");
 const successBtn = document.querySelector(".form__btn--success");
