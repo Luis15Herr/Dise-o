@@ -283,6 +283,9 @@ form.error .form__label--error {
 }
 
 @media screen and (max-width: 800px) {
+  .attribution {
+    color: hsl(234, 29%, 20%);
+  }
   .attribution br {
     display: block;
   }
@@ -319,7 +322,7 @@ form.error .form__label--error {
     margin-top: 34px;
     text-align: left;
     padding-top: 35px;
-    padding-bottom: 30px;
+    padding-bottom: 70px;
     margin: 0 auto;
   }
   .form__title {

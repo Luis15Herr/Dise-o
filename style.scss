@@ -283,6 +283,7 @@ form {
 }
 @media screen and (max-width: 800px) {
   .attribution {
+    color: $DarkSlateGrey;
     br {
       display: block;
     }
@@ -320,7 +321,7 @@ form {
     margin-top: 34px;
     text-align: left;
     padding-top: 35px;
-    padding-bottom: 30px;
+    padding-bottom: 70px;
     margin: 0 auto;
   }
   .form__title {
