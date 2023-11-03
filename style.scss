@@ -269,7 +269,24 @@ form {
   display: none;
 }
 
+.attribution {
+  position: absolute;
+  bottom: 15px;
+  color: $White;
+  font-size: 0.9em;
+  a {
+    color: $Tomato;
+  }
+  br {
+    display: none;
+  }
+}
 @media screen and (max-width: 800px) {
+  .attribution {
+    br {
+      display: block;
+    }
+  }
   html,
   body {
     height: auto;

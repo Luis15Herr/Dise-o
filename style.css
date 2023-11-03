@@ -269,7 +269,23 @@ form.error .form__label--error {
   display: none;
 }
 
+.attribution {
+  position: absolute;
+  bottom: 15px;
+  color: hsl(0, 0%, 100%);
+  font-size: 0.9em;
+}
+.attribution a {
+  color: hsl(4, 100%, 67%);
+}
+.attribution br {
+  display: none;
+}
+
 @media screen and (max-width: 800px) {
+  .attribution br {
+    display: block;
+  }
   html,
   body {
     height: auto;
