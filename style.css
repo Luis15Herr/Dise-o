@@ -41,14 +41,15 @@ body {
 /*left section*/
 .newsletter__form {
   transition: ease 0.5s;
-  width: 820px;
+  /* width: 820px; */
+  width: 935px;
   background: hsl(0, 0%, 100%);
   display: flex;
   padding: 22px;
   /*   height: 565px;
   */
   height: 645px;
-  border-radius: 30px;
+  border-radius: 40px;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
   align-items: center;
@@ -68,9 +69,11 @@ body {
 }
 
 .form {
-  padding-left: 35px;
+  /* padding-left: 35px;
+  padding-right: 58px; */
+  padding-left: 42px;
+  padding-right: 65px;
   text-align: center;
-  padding-right: 58px;
 }
 
 .form__title {
@@ -79,44 +82,52 @@ body {
   top: -3px;
   letter-spacing: -0.5px;
   color: hsl(234, 29%, 20%);
-  font-size: 2.8em;
+  /* font-size: 2.8em; */
+  font-size: 3.2em;
   font-weight: 700;
 }
 
 .form__subtitle {
   color: hsl(235, 18%, 26%);
-  font-size: 0.77em;
-  line-height: 21px;
+  /* font-size: 0.77em;
+  line-height: 21px; */
+  font-size: 0.88em;
+  line-height: 24px;
   text-align: left;
   font-weight: 700;
-  margin-top: 13px;
+  /* margin-top: 13px; */
+  margin-top: 15px;
 }
 
 .form__features {
-  padding-top: 22px;
+  /* padding-top: 22px; */
+  padding-top: 24px;
 }
 
 .features__item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 11px;
+  margin-bottom: 14px;
 }
 
 .features__item-icon {
-  height: 19px;
-  width: 19px;
+  width: 21px;
 }
 
 .features__item-text {
   text-align: left;
-  font-size: 0.78em;
-  padding-left: 13px;
+  /* font-size: 0.78em;
+  padding-left: 13px; */
+  font-size: 0.9em;
+  padding-left: 16px;
 }
 
 /*Form*/
 form {
-  margin-top: 37px;
+  /* margin-top: 37px; */
+  margin-top: 44px;
+  padding-bottom: 5px;
   position: relative;
 }
 form.error .form__email {
@@ -131,7 +142,8 @@ form.error .form__label--error {
 .form__label {
   display: block;
   text-align: left;
-  font-size: 0.6em;
+  /* font-size: 0.6em; */
+  font-size: 0.67em;
   margin-bottom: 10px;
   font-weight: 700;
 }
@@ -140,9 +152,11 @@ form.error .form__label--error {
   display: block;
   width: 100%;
   border: 1px solid hsl(231, 7%, 60%);
-  border-radius: 5px;
+  border-radius: 8px;
   outline: none;
-  height: 50px;
+  /* height: 50px; */
+  height: 56px;
+  font-size: 0.9em;
   padding: 0 22px;
 }
 .form__email:focus {
@@ -150,10 +164,12 @@ form.error .form__label--error {
 }
 
 .form__btn {
-  border-radius: 5px;
-  margin-top: 20px;
+  border-radius: 8px;
+  /* margin-top: 20px; */
+  margin-top: 25px;
   background-color: hsl(234, 29%, 20%);
-  height: 50px;
+  /* height: 50px; */
+  height: 56px;
   width: 100%;
   outline: none;
   border: none;
@@ -186,6 +202,7 @@ form.error .form__label--error {
 .form__btn-text {
   z-index: 1000;
   position: relative;
+  font-size: 1.155em;
 }
 
 .form__label--error {
