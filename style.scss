@@ -232,10 +232,11 @@ form {
   position: absolute;
   transition: ease 0.5s;
   /* width: 331px; */
+
   width: 445px;
   height: 457px;
   padding: 42px 57px;
-  transform: translateY(-1500px);
+  transform: translateY(-1501px);
 }
 .form__success--shown {
   transform: translateY(0);
